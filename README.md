@@ -11,7 +11,7 @@ In this series, we're going to build a real time and automated trading platform 
 
 --Lesson 4a - Building Candlestick Chart and Moving Average Function.
 
---Lesson 4b - Plotting Candlestick Chart and Moving Average. #
+--Lesson 4b - Plotting Candlestick Chart and Moving Average. 
 
 --Lesson 5 - Plotting Line Charts in Mini Charts.
 
