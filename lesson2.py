@@ -36,18 +36,19 @@ def real_time_price(stock_code):
               price, change = [], []
 
         
-        #lesson2.
+        #Lesson2.
         ## Getting and Storing Multiple Real Time Stock Data.
+        ### getting the vol.
         texts = web_content_div(web_content, '')
         if texts != []:
             for count, vol in enumerate(texts):
                 if vol == 'Volume':
-                    Volume = texts[count + 1]
+                    volume = texts[count + 1]
         else:
             Volume = []
         
 
-        #getting the yahoo pattern techincal info.
+        ### getting the yahoo pattern techincal info.
         pattern = web_content_div(web_content, '')
         try:
             latest_pattern = pattern[0] # show any latest info.
@@ -55,7 +56,7 @@ def real_time_price(stock_code):
             latest_pattern = []
         
 
-        #getting another info(yearly target)
+        ### getting another info(yearly target)
         texts = web_content_div(web_content, '')
         if texts != []:
             for count, target in enumerate(texts):
@@ -68,9 +69,9 @@ def real_time_price(stock_code):
             
     except ConnectionError:
         
-        price, change = [], []
+        price, change, volume, latest_pattern, one_year_target = [], [], [], [], []
         
-    return price, change
+    return price, change, volume, latest_pattern, one_year_target
 
 #assing stock = BRK-B
 stock_code = ['BRK-B']
