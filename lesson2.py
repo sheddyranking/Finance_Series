@@ -34,6 +34,22 @@ def real_time_price(stock_code):
         
         else:
               price, change = [], []
+
+
+        #lesson2.
+        ## Getting and Storing Multiple Real Time Stock Data.
+        texts = web_content_div(web_content, '')
+        if texts != []:
+            for count, vol in enumerate(texts):
+                if vol == 'Volume':
+                    Volume = texts[count + 1]
+        else:
+            Volume = []
+        
+
+        
+
+
             
     except ConnectionError:
         
