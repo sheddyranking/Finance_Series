@@ -55,7 +55,16 @@ def real_time_price(stock_code):
             latest_pattern = []
         
 
-        
+        #getting another info(yearly target)
+        texts = web_content_div(web_content, '')
+        if texts != []:
+            for count, target in enumerate(texts):
+                if target  == '1y Target Est':
+                    one_year_target = texts[count+1]
+        else:
+            one_year_target = []
+                    
+
             
     except ConnectionError:
         
