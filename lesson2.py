@@ -35,7 +35,7 @@ def real_time_price(stock_code):
         else:
               price, change = [], []
 
-
+        
         #lesson2.
         ## Getting and Storing Multiple Real Time Stock Data.
         texts = web_content_div(web_content, '')
@@ -47,9 +47,15 @@ def real_time_price(stock_code):
             Volume = []
         
 
+        #getting the yahoo pattern techincal info.
+        pattern = web_content_div(web_content, '')
+        try:
+            latest_pattern = pattern[0] # show any latest info.
+        except IndexError:
+            latest_pattern = []
         
 
-
+        
             
     except ConnectionError:
         
