@@ -18,3 +18,7 @@ In this series, we're going to build a real time and automated trading platform 
 --Lesson 6 - Plotting Trading Volume Bar Chart.
 
 --Lesson 7 - Plotting Relative Strength Index (RSI) Line Chart.
+
+
+### lession1 update.
+for the `path` used   `My(6px)` instead of `My(6px) Pos(r) smartphone_Mt(6px)` It seems it has problem when you use string has many classes. 
