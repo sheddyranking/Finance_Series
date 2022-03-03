@@ -39,7 +39,7 @@ def real_time_price(stock_code):
         #Lesson2.
         ## Getting and Storing Multiple Real Time Stock Data.
         ### getting the vol.
-        texts = web_content_div(web_content, '')
+        texts = web_content_div(web_content, 'Pend(12px)')
         if texts != []:
             for count, vol in enumerate(texts):
                 if vol == 'Volume':
@@ -48,8 +48,8 @@ def real_time_price(stock_code):
             Volume = []
         
 
-        ### getting the yahoo pattern techincal info.
-        pattern = web_content_div(web_content, '')
+        ### getting the yahoo pattern techincal analysis.
+        pattern = web_content_div(web_content, 'Mb(4px)')
         try:
             latest_pattern = pattern[0] # show any latest info.
         except IndexError:
@@ -57,7 +57,7 @@ def real_time_price(stock_code):
         
 
         ### getting another info(yearly target)
-        texts = web_content_div(web_content, '')
+        texts = web_content_div(web_content, 'Pstart(12px)')
         if texts != []:
             for count, target in enumerate(texts):
                 if target  == '1y Target Est':
